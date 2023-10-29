@@ -33,6 +33,7 @@ body {}
 .description_block {
     max-width: 442px;
     width: 100%;
+    position: relative;
     /* background-color: blueviolet; */
 }
 
@@ -49,6 +50,7 @@ body {}
     max-width: 253px;
     margin-top: 55px;
     width: 100%;
+    /* position: relative; */
 }
 
 .black__slider_photo__title_gold_line {
@@ -57,8 +59,8 @@ body {}
     flex-shrink: 0;
     position: absolute;
     background: #E3B873;
-    left: 405px;
-    top: 226px;
+    left: 148px;
+    top: 108px;
 }
 
 .black__slider_photo__description {
@@ -122,6 +124,10 @@ body {}
     gap: 30px;
 }
 
+.black__slider_photo__arrows_item:hover{
+    cursor: pointer;
+}
+
 /* Блок с фото и навигацией */
 
 .slider_photo_block {
@@ -148,23 +154,30 @@ body {}
     margin-bottom: 51px;
 }
 
-.gold_text{
+.slider_photo_block__link:hover{
+    cursor: pointer;
+
+}
+
+.gold_text {
     color: #E3B873;
-font-family: Yeseva One;
-font-size: 14px;
-font-style: normal;
-font-weight: 400;
-line-height: 138.6%; /* 19.404px */
-text-transform: uppercase;
-text-decoration: underline;
-text-underline-offset: 7px;
+    font-family: Yeseva One;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 138.6%;
+    /* 19.404px */
+    text-transform: uppercase;
+    text-decoration: underline;
+    text-underline-offset: 7px;
 }
 
 /* Блок фотографии */
 
-.slider_photo_block__picture,
-.slider_photo_block__picture img {
-    max-width: 679px;
-    width: 100%;
+.slider_photo_block__picture {
+    background: url("images/png/slider_photo_1.png"), lightgray 50% / cover no-repeat;
+    width: 679px;
+    height: 482px;
+    /* width: 100%; */
     /* margin-top: 53px; */
 }
