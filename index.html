@@ -32,19 +32,19 @@
                     <div class="perfomace_block__first">
                         <div class="perfomace_block__container">
                             <h3 class="perfomace_block__title">City:</h3>
-                            <p class="perfomace_block__description">Rostov-on-Don <br>
-                                LCD admiral</p>
+                            <p class="perfomace_block__description city">Rostov-on-Don </p>
+                            <p class="perfomace_block__description dept">LCD admiral</p>
                         </div>
                         <div class="perfomace_block__container">
                             <h3 class="perfomace_block__title">Repair time:</h3>
-                            <p class="perfomace_block__description">3.5 months</p>
+                            <p class="perfomace_block__description time">3.5 months</p>
                         </div>
                     </div>
 
                     <div class="perfomace_block__second">
                         <div class="perfomace_block__container">
                             <h3 class="perfomace_block__title">apartment area:</h3>
-                            <p class="perfomace_block__description">81 m2</p>
+                            <p class="perfomace_block__description area">81 m2</p>
                         </div>
                         <div class="perfomace_block__container">
                             <h3 class="perfomace_block__title">Repair Cost:</h3>
@@ -56,7 +56,8 @@
                 </div>
 
                 <div class="black__slider_photo__arrows">
-                    <svg class="black__slider_photo__arrows_item prev" width="42" height="14" viewBox="0 0 42 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+
+                    <svg id="left_arrow" class="black__slider_photo__arrows_item prev" width="42" height="14" viewBox="0 0 42 14" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <path fill-rule="evenodd" clip-rule="evenodd"
                             d="M6.63807 13.276L2.29917e-05 6.638L6.63807 -3.82298e-05L7.58563 0.94753L1.89516 6.638L7.58563 12.3285L6.63807 13.276Z"
                             fill="white" />
@@ -66,20 +67,21 @@
                     </svg>
 
                     <svg class="black__slider_photo__arrows_item" width="11" height="11" viewBox="0 0 11 11" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <rect x="0.952759" y="0.456207" width="9.56667" height="9.56667" rx="4.78333" fill="white" />
+                        <rect class="n1_navi_icon navi__dot" x="0.952759" y="0.456207" width="9.56667" height="9.56667" rx="4.78333" fill="white" 
+                        fill-opacity="1"/>
                     </svg>
 
                     <svg class="black__slider_photo__arrows_item" width="10" height="11" viewBox="0 0 10 11" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <rect x="0.0583496" y="0.45636" width="9.56667" height="9.56667" rx="4.78333" fill="white"
+                        <rect class="n2_navi_icon navi__dot" x="0.0583496" y="0.45636" width="9.56667" height="9.56667" rx="4.78333" fill="white"
                             fill-opacity="0.3" />
                     </svg>
 
                     <svg class="black__slider_photo__arrows_item" width="10" height="11" viewBox="0 0 10 11" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <rect x="0.0583496" y="0.45636" width="9.56667" height="9.56667" rx="4.78333" fill="white"
+                        <rect class="n3_navi_icon navi__dot" x="0.0583496" y="0.45636" width="9.56667" height="9.56667" rx="4.78333" fill="white"
                             fill-opacity="0.3" />
                     </svg>
 
-                    <svg class="black__slider_photo__arrows_item next" width="42" height="14" viewBox="0 0 42 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <svg id="right_arrow" class="black__slider_photo__arrows_item next" width="42" height="14" viewBox="0 0 42 14" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <path fill-rule="evenodd" clip-rule="evenodd"
                             d="M35.0451 -0.000183105L41.6831 6.63786L35.0451 13.2759L34.0975 12.3283L39.788 6.63786L34.0975 0.947384L35.0451 -0.000183105Z"
                             fill="white" />
@@ -94,14 +96,14 @@
             <div class="slider_photo_block">
                 <nav class="slider_photo_block__navigation">
                     <ul class="slider_photo_block__list">
-                        <li class="slider_photo_block__link gold_text">Rostov-on-Don, Admiral</li>
+                        <li class="n1 slider_photo_block__link gold_text" data-index="1">Rostov-on-Don, Admiral</li>
                         <!-- <div class="slider_photo_block__link_gold_line"></div> -->
-                        <li class="slider_photo_block__link">Sochi Thieves</li>
-                        <li class="slider_photo_block__link">Rostov-on-Don Patriotic</li>
+                        <li class="n2 slider_photo_block__link" data-index="2">Sochi Thieves</li>
+                        <li class="n3 slider_photo_block__link" data-index="3">Rostov-on-Don Patriotic</li>
                     </ul>
                 </nav>
-                <div class="slider_photo_block__picture image">
-                    <!-- <img src="images/png/slider_photo_1.png" alt="apartments_photo"> -->
+                <div>
+                    <img class="slider_photo_block__picture" src="images/png/slider_photo_1.png" data-index="1" alt="apartments_photo">
                     <!-- <img src="images/png/slider_photo_2.png" alt="apartments_photo"> -->
                     <!-- <img src="images/png/slider_photo_3.png" alt="apartments_photo"> -->
                 </div>

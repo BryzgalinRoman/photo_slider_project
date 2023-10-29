@@ -1,37 +1,66 @@
 // Слайдер с Фото
 
-const entities = [  //сущности
-    {
-      text: 'Rostov-on-Don, Admiral',
-      img: 'C:\Users\rbryz\projects\photo_slider_project\images\png\slider_photo_1.png'
-    },
-    {
-      text: 'Sochi Thieves',
-      img: 'C:\Users\rbryz\projects\photo_slider_project\images\png\slider_photo_2.png'
-    },
-    {
-      text: 'Rostov-on-Don Patriotic',
-      img: 'C:\Users\rbryz\projects\photo_slider_project\images\png\slider_photo_3.png'
+//массивы с данными
+images = ["images/png/slider_photo_1.png", "images/png/slider_photo_2.png", "images/png/slider_photo_3.png"];
+city = ["Rostov-on-Don", "Sochi", "Rostov-on-Don"];
+dept = ["LCD admiral", "Theives", "Patriotic"];
+area = ["81 m2", "105 m2", "93 m2"];
+time = ["3.5 months", "4 months", "3 months"];
+
+//функция переключения активного набора данных
+function setActive(index){
+    for (let k = 1; k <= 3; k++) {
+        if (k === index) {
+            document.querySelector(`.n${k}`).classList.add("gold_text");
+            document.querySelector(`.n${k}_navi_icon`).setAttribute('fill-opacity', 1);
+        } else {
+            document.querySelector(`.n${k}`).classList.remove("gold_text");
+            document.querySelector(`.n${k}_navi_icon`).setAttribute('fill-opacity', 0.3);
+        }
     }
-  ]
-  
-  const text = document.querySelector('.gold_text')
-  const img = document.querySelector('.image')
-  
-  const setEntity = (index) => {
-    text.innerText = entities[index].text
-    img.style.backgroundImage = `url(${entities[index].img})`
-  }
-  
-  const prev = document.querySelector('.prev')
-  const next = document.querySelector('.next')
-  let currentIndex = 0
-  
-  prev.addEventListener('click', () => {
-    setEntity(currentIndex - 1);
-    currentIndex -= 1;
-  })
-  next.addEventListener('click', () => {
-    setEntity(currentIndex + 1);
-    currentIndex += 1;
-  })
+    document.querySelector(".slider_photo_block__picture").src = images[index-1];
+    document.querySelector(".slider_photo_block__picture").setAttribute("data-index",`${index}`);
+    document.querySelector(".city").innerHTML=city[index-1];
+    document.querySelector(".dept").innerHTML=dept[index-1];
+    document.querySelector(".area").innerHTML=area[index-1];
+    document.querySelector(".time").innerHTML=time[index-1];
+}
+
+//обработка кликов на элементы меню завершенных проектов
+let item = document.getElementsByClassName("slider_photo_block__link");
+for (let i = 0; i < item.length; i++) {
+    item[i].addEventListener("click", function() {
+        setActive(i+1); 
+ } ) }
+
+ //обработка кликов на навигационные точки
+ let itmdot = document.getElementsByClassName("navi__dot"); 
+ for (let i = 0; i < itm.length; i++) {
+    itmdot[i].addEventListener("click", function() {
+        setActive(i+1); 
+ } ) }
+
+ //стрeлки
+left_arrow.addEventListener("click", function() {
+    const elem = document.querySelector(".slider_photo_block__picture");
+    const index = elem.getAttribute("data-index");
+    if (index === "1") {
+        elem.setAttribute("data-index",`${images.length}`);
+        setActive(images.length);
+    } else {
+        elem.setAttribute("data-index",`${index - 1}`);
+        setActive(+index - 1);
+        };
+    });
+
+right_arrow.addEventListener("click", function() {
+    const elem = document.querySelector(".slider_photo_block__picture")
+    const index = elem.getAttribute("data-index");
+    if (index === `${images.length}`) {
+        elem.setAttribute("data-index","1");
+        setActive(1);
+    } else {
+        elem.setAttribute("data-index",`${index + 1}`);
+        setActive(+index + 1);
+    };
+});

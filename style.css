@@ -156,6 +156,9 @@ body {}
 
 .slider_photo_block__link:hover{
     cursor: pointer;
+    color: #E3B873;
+    text-decoration: underline;
+    text-underline-offset: 7px;
 
 }
 
@@ -175,10 +178,10 @@ body {}
 /* Блок фотографии */
 
 .slider_photo_block__picture {
-    background: url("images/png/slider_photo_1.png"), lightgray 50% / cover no-repeat;
+    /* background: url("images/png/slider_photo_1.png"), lightgray 50% / cover no-repeat; */
     width: 679px;
     height: 482px;
-    background-size: cover;
+    /* background-size: cover; */
     /* width: 100%; */
     /* margin-top: 53px; */
 }
