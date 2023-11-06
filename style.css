@@ -1,5 +1,3 @@
-body {}
-
 /* Секция черный слайдер фото */
 
 .black__slider_photo {
@@ -17,7 +15,7 @@ body {}
     margin: 0 auto;
 }
 
-/* Контайнер черной секции */
+/* Контэйнер черной секции */
 
 .slider_photo_container {
     display: flex;
@@ -25,7 +23,6 @@ body {}
     max-height: 553px;
     width: 100%;
     gap: 50px;
-    /* flex-wrap: wrap; */
 }
 
 /* Блок в описанием и характеристиками */
@@ -34,7 +31,6 @@ body {}
     max-width: 442px;
     width: 100%;
     position: relative;
-    /* background-color: blueviolet; */
 }
 
 .black__slider_photo__title {
@@ -44,13 +40,11 @@ body {}
     font-style: normal;
     font-weight: 400;
     line-height: 138.6%;
-    /* 37.422px */
     letter-spacing: -1.89px;
     text-transform: uppercase;
     max-width: 253px;
     margin-top: 55px;
     width: 100%;
-    /* position: relative; */
 }
 
 .black__slider_photo__title_gold_line {
@@ -70,7 +64,6 @@ body {}
     font-style: normal;
     font-weight: 400;
     line-height: 190.96%;
-    /* 26.734px */
     max-width: 442px;
     margin-top: 34px;
 }
@@ -94,14 +87,12 @@ body {}
 }
 
 .perfomace_block__title {
-    /* width: 156px; */
     color: #E3B873;
     font-family: Yeseva One;
     font-size: 18px;
     font-style: normal;
     font-weight: 400;
     line-height: 138.6%;
-    /* 24.948px */
     text-transform: uppercase;
     margin-bottom: 9px;
 }
@@ -113,7 +104,6 @@ body {}
     font-style: normal;
     font-weight: 400;
     line-height: 163.68%;
-    /* 21.278px */
 }
 
 /* Стрелочки */
@@ -124,7 +114,7 @@ body {}
     gap: 30px;
 }
 
-.black__slider_photo__arrows_item:hover{
+.black__slider_photo__arrows_item:hover {
     cursor: pointer;
 }
 
@@ -132,7 +122,6 @@ body {}
 
 .slider_photo_block {
     max-width: 679px;
-    /* background-color: rgb(57, 70, 69); */
 }
 
 /* Блок навигации */
@@ -144,7 +133,6 @@ body {}
     font-style: normal;
     font-weight: 400;
     line-height: 138.6%;
-    /* 19.404px */
     text-transform: uppercase;
 }
 
@@ -154,7 +142,7 @@ body {}
     margin-bottom: 51px;
 }
 
-.slider_photo_block__link:hover{
+.slider_photo_block__link:hover {
     cursor: pointer;
     color: #E3B873;
     text-decoration: underline;
@@ -169,7 +157,6 @@ body {}
     font-style: normal;
     font-weight: 400;
     line-height: 138.6%;
-    /* 19.404px */
     text-transform: uppercase;
     text-decoration: underline;
     text-underline-offset: 7px;
@@ -178,10 +165,6 @@ body {}
 /* Блок фотографии */
 
 .slider_photo_block__picture {
-    /* background: url("images/png/slider_photo_1.png"), lightgray 50% / cover no-repeat; */
     width: 679px;
     height: 482px;
-    /* background-size: cover; */
-    /* width: 100%; */
-    /* margin-top: 53px; */
 }
